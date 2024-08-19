@@ -141,7 +141,7 @@ node . mint DSV12KPb8m5b6YtfmqY89K6YqvdVwMYDPn "text/plain;charset=utf-8" 576f6f
 delegates
 
 ```
-node . mint <address> “” “”  <delegate inscription ID>
+node . mint <address> "" ""  <delegate inscription ID>
 ```
 
 **Note**: Please use a fresh wallet to mint to with nothing else in it until proper wallet for doginals support comes. You can get a paper wallet [here](https://www.fujicoin.org/wallet_generator?currency=Dogecoin).
