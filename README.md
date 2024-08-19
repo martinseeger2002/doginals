@@ -72,22 +72,6 @@ node . wallet new
 ```
 After creating your doginals wallet copy your private key from your doginals_folder/.wallet.
 
-$env:NODE_RPC_URL = "http://192.168.68.105:22555"
-$env:NODE_RPC_USER = "your_rpc_user"
-$env:NODE_RPC_PASS = "your_rpc_password"
-
-$rpcUrl = $env:NODE_RPC_URL
-$rpcUser = $env:NODE_RPC_USER
-$rpcPass = $env:NODE_RPC_PASS
-$privateKey = "QUQUML3YYqQFJaWqxDzWR81RrHZyHBG633z7b7iUjNwM7tbhUvov" # Replace with your actual private key
-$label = "" # Optional label for the imported address
-$rescan = $false # Set to false to avoid rescanning the blockchain
-$rpcData = '{"jsonrpc":"1.0","id":"curltext","method":"importprivkey","params":["' + $privateKey + '","' + $label + '",' + $rescan.ToString().ToLower() + ']}'
-
-curl --user "${rpcUser}:${rpcPass}" --data-binary $rpcData -H 'content-type:text/plain;' $rpcUrl
-
-
-
 File>Import Private Key
 
 Paste private key and name wallet.
