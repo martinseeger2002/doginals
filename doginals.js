@@ -347,6 +347,7 @@ async function mint(paramAddress, paramContentTypeOrFilename, paramHexData, para
 async function broadcastAll(txs, retry) {
    for (let i = 0; i < txs.length; i++) {
        console.log(`broadcasting tx ${i + 1} of ${txs.length}`)
+       console.log('txid:', txs[1].hash)
 
 
        try {
@@ -373,7 +374,7 @@ async function broadcastAll(txs, retry) {
 
 
    if (txs.length > 1) {
-     console.log('inscription txid:', txs[1].hash)
+     console.log('inscription complete')
    }
 }
 
