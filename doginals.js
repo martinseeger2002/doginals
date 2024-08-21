@@ -359,7 +359,7 @@ async function broadcastAll(txs, retry) {
            continue;
          }
          console.log('saving pending txs to pending-txs.json')
-         console.log('to reattempt broadcast, re-run the command')
+         console.log('too long mempool reached, wait for TXID to confirm before wallet sync command')
          fs.writeFileSync('pending-txs.json', JSON.stringify(txs.slice(i).map(tx => tx.toString())))
          process.exit(1)
        }
@@ -374,7 +374,7 @@ async function broadcastAll(txs, retry) {
 
 
    if (txs.length > 1) {
-     console.log('inscription complete')
+     console.log('inscription complete continue to next file.')
    }
 }
 
